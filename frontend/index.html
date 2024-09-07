@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link href="style.css" rel="stylesheet">
+    <link href="modal.css" rel="stylesheet">
+    <script defer type="module" src="taskEditing.js"></script>
+    <script defer type="module" src="taskAddition.js"></script>
+    <script defer type="module" src="start.js"></script>
+
+    <title>Falso Trello</title>
+</head>
+
+<body class="scroller">
+    <div id="topBar">
+        <h1 class="header-title">GESTOR DE TAREAS</h1>
+    </div>
+    <!--    <div id="boton">-->
+    <button id="addTask" class="button is-small is-link">+</button>
+    <!--    </div>-->
+    <div class="container">
+        <div id="backlog" class="card" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="card-title">
+                <h2>BACKLOG</h2>
+            </div>
+            <div class="card-content scroller">
+
+            </div>
+        </div>
+        <div id="to-do" class="card" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="card-title">
+                <h2>TO DO</h2>
+            </div>
+            <div class="card-content scroller">
+            </div>
+        </div>
+        <div id="in-progress" class="card" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="card-title">
+                <h2>IN PROGRESS</h2>
+            </div>
+            <div class="card-content scroller">
+
+            </div>
+        </div>
+        <div id="blocked" class="card">
+            <div class="card-title">
+                <h2>BLOCKED</h2>
+            </div>
+            <div class="card-content scroller">
+
+            </div>
+        </div>
+        <div id="done" class="card">
+            <div class="card-title">
+                <h2>DONE</h2>
+            </div>
+            <div class="card-content scroller">
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

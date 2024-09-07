@@ -1,0 +1,307 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+/* Light mode */
+@media (prefers-color-scheme: light) {
+
+    body,
+    html {
+        background-color: floralwhite;
+    }
+
+    .card {
+        background-color: #a8dadc;
+    }
+
+    h1,
+    h2,
+    p,
+    h3,
+    #addTask {
+        color: #5f0f40;
+    }
+
+    .task {
+        background-color: white;
+    }
+
+    #addTask {
+        background-color: #a8dadc;
+    }
+
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+
+    body,
+    html {
+        background-color: #333333;
+    }
+
+    .card {
+        background-color: #495f60;
+    }
+
+    .card-title {
+        background-color: #495f60;
+    }
+
+    h1,
+    h2,
+    p,
+    h3 {
+        color: #f1faee;
+    }
+
+    .task {
+        background-color: #3b4c4d;
+    }
+
+    #addTask {
+        background-color: #197a71;
+    }
+
+
+}
+
+
+.scroller {
+    --sb-track-color: #a8dadc;
+    --sb-thumb-color: #3b7080;
+    --sb-size: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.scroller::-webkit-scrollbar {
+    width: var(--sb-size)
+}
+
+.scroller::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 3px;
+}
+
+.scroller::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 3px;
+
+}
+
+.scroller::-webkit-scrollbar-button:start:increment {
+    height: 2%;
+    display: block;
+    background: transparent;
+}
+
+.scroller::-webkit-scrollbar-button:end:increment {
+    height: 2%;
+    display: block;
+    background: transparent;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+    .scroller {
+        scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    }
+}
+
+h1,
+h2,
+p,
+h3 {
+    font-family: 'Moderustic';
+}
+
+.hide {
+    display: none;
+}
+
+#boton {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+
+#addTask {
+    font-size: 2vb;
+    text-align: center;
+    position: fixed;
+    border-radius: 10vb;
+    margin: 90vh 2vb 0 0;
+    z-index: 1;
+    border: 0.1rem solid black !important;
+}
+
+.header-title {
+    padding-top: 1.2rem;
+}
+
+#topBar {
+    width: 100%;
+    margin-bottom: 3%;
+}
+
+#topBar h1 {
+    text-align: center;
+    font-size: 5vb;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+
+.card {
+    width: 85%;
+    min-width: 200px;
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0.01rem solid black;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    gap: 1vh;
+}
+
+.card-title {
+    width: 100%;
+    position: absolute;
+    padding: 0.3rem;
+    border-bottom: 0.01rem solid black;
+
+}
+
+.card-title h2 {
+    text-align: center;
+}
+
+.card-content {
+    margin-top: 2.1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0.5rem;
+    flex-grow: 1;
+}
+
+.card-content h3 {
+    font-weight: 600;
+    font-size: 3vh;
+
+}
+
+h3,
+p {
+    padding: 1vh;
+}
+
+.task>* {
+    word-break: break-all;
+}
+
+.task {
+    margin-bottom: 8%;
+    width: 95%;
+    border-radius: 3vh;
+    border: 0.01rem solid black;
+    padding: 2.5%;
+}
+
+@media (min-width:768px) {
+
+    body,
+    html {
+        overflow-x: auto;
+    }
+
+    #topBar {
+        margin-bottom: 1%;
+    }
+
+    .card {
+        max-height: 5rem;
+        min-height: 45%;
+        width: 30%;
+        min-width: none;
+        max-width: 19rem;
+    }
+
+    .card-content {
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    #addTask {
+        position: relative;
+        margin: auto 2% 2% 80%;
+    }
+}
+
+@media (min-width:1440px) {
+    .container {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: flex-start;
+        margin-left: 2vb;
+    }
+
+    #topBar {
+        margin-bottom: 1%;
+    }
+
+    .card h2 {
+        font-size: 1.4vb;
+    }
+
+    .card {
+        min-height: 30vb;
+        max-height: 76vb;
+        min-width: 35vb;
+    }
+
+    .card-content {
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+}
+
+@media (min-width:1740px) {
+    .container {
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        justify-content: center;
+        margin-left: auto;
+    }
+
+    #topBar {
+        margin-bottom: 1%;
+    }
+
+    .card h2 {
+        font-size: 1.4vb;
+    }
+
+    .card {
+        min-height: 30vb;
+        max-height: 76vb;
+        min-width: 35vb;
+    }
+
+    .card-content {
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+}

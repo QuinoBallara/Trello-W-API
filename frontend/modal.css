@@ -1,0 +1,182 @@
+.modal-content {
+    background-color: #9bcdd9;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    width: 80%;
+    max-width: 600px;
+    margin: 5vh auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+.modal-header {
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #68b3db;
+    margin-bottom: 1rem;
+    background-color: #dadd37;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h2 {
+    margin: 0;
+    color: #0a0a0a;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+
+.modal-close-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #e74c3c;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+}
+
+.modal-close-button:hover {
+    color: #c0392b;
+}
+
+.modal-content label {
+    font-weight: 600;
+    color: #161212;
+    margin-bottom: 0.5rem;
+}
+
+.modal-content input[type="text"],
+.modal-content textarea,
+.modal-content select {
+    width: 20%;
+    padding: 0.5rem;
+    border: 1.5px solid #180e84;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+#date,
+#dateEdit {
+    width: 20%;
+    padding: 0.5rem;
+    border: 1.5px solid #180e84;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.modal-content textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.button-container #accept,
+#acceptEdit {
+    background-color: #2ecc71;
+}
+
+.button-container #accept:hover,
+#acceptEdit:hover {
+    background-color: #27ae60;
+    transform: scale(1.05);
+}
+
+.button-container #cancel,
+#cancelEdit,
+#deleteEdit {
+    background-color: #e74c3c;
+}
+
+.button-container #cancel:hover,
+#cancelEdit:hover,
+#deleteEdit:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+.modal-content h2 {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+
+}
+
+.modal-content label {
+    font-weight: bold;
+    color: #0c0c0f;
+    margin-bottom: 5px;
+}
+
+.modal-content textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.button-container button {
+    background-color: #4CAF50;
+    color: #bc2121;
+    border: none;
+    border-radius: 200px;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 50px;
+}
+
+#accept,
+#acceptEdit {
+    background-color: green;
+    color: #000;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+#accept:hover,
+#acceptEdit:hover {
+    background-color: #b7d6b8;
+}
+
+#cancel,
+#cancelEdit,
+#deleteEdit {
+    background-color: red;
+    color: #000;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+#cancel:hover,
+#cancelEdit:hover,
+#deleteEdit:hover {
+    background-color: rgb(186, 151, 151);
+}
+
+.modal-content input[type="text"],
+.modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #090b56;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
